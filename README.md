@@ -1,5 +1,7 @@
 # expls (エクスプレス) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange)](https://github.com/kaikai-kitan/expls/blob/main/LICENSE)
+
+[![Coverage Status](https://coveralls.io/repos/github/kaikai-kitan/expls/badge.svg?branch=main)](https://coveralls.io/github/kaikai-kitan/expls?branch=main)
 ## Description
 
 ## About
