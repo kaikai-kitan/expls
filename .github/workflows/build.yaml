@@ -22,15 +22,16 @@ jobs:
           cargo install cargo-llvm-cov
 
       - name: Checkout the project
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Test & Build
         run: |
+          cargo clippy -- -D warnings
+          cargo build --release
           cargo llvm-cov --lcov --output-path coverage.lcov
-          cargo build
 
       - name: Send coverage to coveralls
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@v2
         if: matrix.os == 'ubuntu-latest'
         with:
           github-token: ${{ secrets.github_token }}
