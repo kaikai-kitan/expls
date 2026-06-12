@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Expls on expls</title><link>https://example.org/tags/expls/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:40:00 +0900</lastBuildDate><atom:link href="https://example.org/tags/expls/index.xml" rel="self" type="application/rss+xml"/><item><title>実行例集</title><link>https://example.org/post/05-examples/</link><pubDate>Fri, 12 Jun 2026 10:40:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/05-examples/</guid><description>
+<![CDATA[<h1>実行例集</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <p>ここでは、よく使う場面ごとに expls の実行例をまとめます。
+（実際の出力はカラー表示されます。下のテキストは色を除いたイメージです。）</p>
+<h2 id="例1いまのフォルダをさっと見る">
+<a class="header-anchor" href="#%e4%be%8b1%e3%81%84%e3%81%be%e3%81%ae%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%82%92%e3%81%95%e3%81%a3%e3%81%a8%e8%a6%8b%e3%82%8b"></a>
+例1：いまのフォルダをさっと見る
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Cargo.lock
+</span></span><span class="line"><span class="cl">Cargo.toml
+</span></span><span class="line"><span class="cl">LICENSE
+</span></span><span class="line"><span class="cl">README.md
+</span></span><span class="line"><span class="cl">src/
+</span></span><span class="line"><span class="cl">target/
+</span></span></code></pre></div><p>拡張子ごとに色分けされ、同じ拡張子のなかでは新しいものほど濃く表示されます。</p>
+<h2 id="例2隠しファイルも含めて全部見る">
+<a class="header-anchor" href="#%e4%be%8b2%e9%9a%a0%e3%81%97%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%82%e5%90%ab%e3%82%81%e3%81%a6%e5%85%a8%e9%83%a8%e8%a6%8b%e3%82%8b"></a>
+例2：隠しファイルも含めて全部見る
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls -a
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">.git/
+</span></span><span class="line"><span class="cl">.github/
+</span></span><span class="line"><span class="cl">.gitignore
+</span></span><span class="line"><span class="cl">Cargo.lock
+</span></span><span class="line"><span class="cl">Cargo.toml
+</span></span><span class="line"><span class="cl">LICENSE
+</span></span><span class="line"><span class="cl">README.md
+</span></span><span class="line"><span class="cl">src/
+</span></span><span class="line"><span class="cl">target/
+</span></span></code></pre></div><p><code>.git</code> などの隠し項目が増えているのが分かります。</p>
+<h2 id="例3別のフォルダを指定して見る">
+<a class="header-anchor" href="#%e4%be%8b3%e5%88%a5%e3%81%ae%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e3%81%a6%e8%a6%8b%e3%82%8b"></a>
+例3：別のフォルダを指定して見る
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls -p ./src
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">main.rs
+</span></span></code></pre></div><p><code>src</code> フォルダの中だけを表示しています。移動する必要はありません。</p>
+<h2 id="例4サブフォルダの中まで表示する">
+<a class="header-anchor" href="#%e4%be%8b4%e3%82%b5%e3%83%96%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e4%b8%ad%e3%81%be%e3%81%a7%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b"></a>
+例4：サブフォルダの中まで表示する
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls -d <span class="m">1</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Cargo.lock
+</span></span><span class="line"><span class="cl">Cargo.toml
+</span></span><span class="line"><span class="cl">LICENSE
+</span></span><span class="line"><span class="cl">README.md
+</span></span><span class="line"><span class="cl">src/
+</span></span><span class="line"><span class="cl">  main.rs
+</span></span><span class="line"><span class="cl">target/
+</span></span><span class="line"><span class="cl">  CACHEDIR.TAG
+</span></span><span class="line"><span class="cl">  debug/
+</span></span></code></pre></div><p><code>src/</code> や <code>target/</code> の <strong>中身が1段下げて</strong>表示されます。
+<code>-d 2</code> にすれば、さらにもう一段深くまで潜ります。</p>
+<h2 id="例5グラデーションを逆にする">
+<a class="header-anchor" href="#%e4%be%8b5%e3%82%b0%e3%83%a9%e3%83%87%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e9%80%86%e3%81%ab%e3%81%99%e3%82%8b"></a>
+例5：グラデーションを逆にする
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls --reverse
+</span></span></code></pre></div><p>新しいものを薄く、古いものを濃く表示します。
+「昔から残っているファイルを目立たせたい」ときに使います。</p>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>使い方</category></item><item><title>色分けのしくみ — アルゴリズム解説</title><link>https://example.org/post/04-algorithm/</link><pubDate>Fri, 12 Jun 2026 10:30:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/04-algorithm/</guid><description>
+<![CDATA[<h1>色分けのしくみ — アルゴリズム解説</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <p>expls の「色」はどうやって決まっているのでしょうか。
+ここでは仕組みを、できるだけやさしく説明します。</p>
+<p>色は次の <strong>2つの軸</strong> で決まります。</p>
+<ol>
+<li><strong>拡張子</strong> → 色あい（色相）を決める</li>
+<li><strong>更新の新しさ</strong> → 色の濃さ（鮮やかさ・明るさ）を決める</li>
+</ol>
+<p>順番に見ていきましょう。</p>
+<h2 id="軸1拡張子で色あいを決める">
+<a class="header-anchor" href="#%e8%bb%b81%e6%8b%a1%e5%bc%b5%e5%ad%90%e3%81%a7%e8%89%b2%e3%81%82%e3%81%84%e3%82%92%e6%b1%ba%e3%82%81%e3%82%8b"></a>
+軸1：拡張子で「色あい」を決める
+</h2><p>ファイルの拡張子（<code>.rs</code>, <code>.py</code>, <code>.png</code> など）ごとに、
+<strong>色相（hue）</strong> という「色あいを表す角度」を割り当てています。</p>
+<p>色相は 0〜360 の数字で、円のように一周します。</p>
+<ul>
+<li>0 / 360 付近 … 赤</li>
+<li>120 付近 … 緑</li>
+<li>240 付近 … 青</li>
+</ul>
+<p>たとえば expls では、おおよそ次のように割り当てています。</p>
+<table>
+	<thead>
+			<tr>
+					<th>拡張子</th>
+					<th>色あい（色相）</th>
+					<th>だいたいの色</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>.rs</code>（Rust）</td>
+					<td>25</td>
+					<td>オレンジ</td>
+			</tr>
+			<tr>
+					<td><code>.py</code>（Python）</td>
+					<td>215</td>
+					<td>青</td>
+			</tr>
+			<tr>
+					<td><code>.js</code></td>
+					<td>50</td>
+					<td>黄</td>
+			</tr>
+			<tr>
+					<td><code>.md</code></td>
+					<td>175</td>
+					<td>シアン</td>
+			</tr>
+			<tr>
+					<td><code>.png</code> などの画像</td>
+					<td>325</td>
+					<td>ピンク</td>
+			</tr>
+			<tr>
+					<td>ディレクトリ</td>
+					<td>220</td>
+					<td>青</td>
+			</tr>
+	</tbody>
+</table>
+<p>同じ言語・同じ仲間のファイルは似た色になるので、
+画面の中で<strong>種類ごとにまとまって見える</strong>わけです。</p>
+<p>リストに無い拡張子（未知のファイル）には色あいを割り当てず、<strong>グレー</strong>で表示します。</p>
+<h2 id="軸2更新の新しさで濃さを決める">
+<a class="header-anchor" href="#%e8%bb%b82%e6%9b%b4%e6%96%b0%e3%81%ae%e6%96%b0%e3%81%97%e3%81%95%e3%81%a7%e6%bf%83%e3%81%95%e3%82%92%e6%b1%ba%e3%82%81%e3%82%8b"></a>
+軸2：更新の新しさで「濃さ」を決める
+</h2><p>次に、同じ拡張子のファイルを集めて、<strong>更新日時の新しい順に並べます</strong>。
+そして並び順から、<code>0.0</code>〜<code>1.0</code> の数字 <code>t</code> を計算します。</p>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>しくみ</category></item><item><title>チュートリアル — 基本からオプションまで</title><link>https://example.org/post/03-tutorial/</link><pubDate>Fri, 12 Jun 2026 10:20:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/03-tutorial/</guid><description>
+<![CDATA[<h1>チュートリアル — 基本からオプションまで</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <p>このページでは、expls を実際に動かしながら使い方を覚えていきます。
+むずかしい知識は必要ありません。順番に試してみてください。</p>
+<h2 id="ステップ1そのまま実行してみる">
+<a class="header-anchor" href="#%e3%82%b9%e3%83%86%e3%83%83%e3%83%971%e3%81%9d%e3%81%ae%e3%81%be%e3%81%be%e5%ae%9f%e8%a1%8c%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b"></a>
+ステップ1：そのまま実行してみる
+</h2><p>オプションを何も付けずに実行すると、<strong>いまいるフォルダ</strong>の中身が表示されます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls
+</span></span></code></pre></div><p>ファイルは拡張子ごとに色分けされ、同じ種類のなかでは
+<strong>更新が新しいものほど濃い色</strong>で表示されます。</p>
+<h2 id="ステップ2隠しファイルも表示する-a--all">
+<a class="header-anchor" href="#%e3%82%b9%e3%83%86%e3%83%83%e3%83%972%e9%9a%a0%e3%81%97%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%82%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b-a--all"></a>
+ステップ2：隠しファイルも表示する（-a / &ndash;all）
+</h2><p><code>.</code> で始まるファイルやフォルダ（隠しファイル）は、通常は表示されません。
+<code>-a</code> を付けるとそれらも表示できます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls -a
+</span></span></code></pre></div><p><code>.git</code> や <code>.gitignore</code> のような隠し項目も一覧に出てきます。</p>
+<h2 id="ステップ3別のフォルダを見る-p--path">
+<a class="header-anchor" href="#%e3%82%b9%e3%83%86%e3%83%83%e3%83%973%e5%88%a5%e3%81%ae%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%82%92%e8%a6%8b%e3%82%8b-p--path"></a>
+ステップ3：別のフォルダを見る（-p / &ndash;path）
+</h2><p>いまいる場所を移動しなくても、<code>-p</code> で見たいフォルダを指定できます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls -p ./src
+</span></span></code></pre></div><p><code>--path</code> と書いても同じ意味です。指定しなければカレントディレクトリ（<code>.</code>）が対象です。</p>
+<h2 id="ステップ4フォルダの中まで掘り下げる-d--depth">
+<a class="header-anchor" href="#%e3%82%b9%e3%83%86%e3%83%83%e3%83%974%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e3%81%ae%e4%b8%ad%e3%81%be%e3%81%a7%e6%8e%98%e3%82%8a%e4%b8%8b%e3%81%92%e3%82%8b-d--depth"></a>
+ステップ4：フォルダの中まで掘り下げる（-d / &ndash;depth）
+</h2><p><code>-d</code> に数字を渡すと、サブフォルダの中まで<strong>何段階潜るか</strong>を指定できます。
+潜った中身はインデント（字下げ）されて表示されます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls -d <span class="m">1</span>   <span class="c1"># 1段階だけ中に入る</span>
+</span></span><span class="line"><span class="cl">expls -d <span class="m">2</span>   <span class="c1"># 2段階まで入る</span>
+</span></span></code></pre></div><p><code>-d</code> を付けなければ、サブフォルダの中までは表示しません（一覧だけ）。</p>
+<h2 id="ステップ5グラデーションを逆にするreverse">
+<a class="header-anchor" href="#%e3%82%b9%e3%83%86%e3%83%83%e3%83%975%e3%82%b0%e3%83%a9%e3%83%87%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e9%80%86%e3%81%ab%e3%81%99%e3%82%8breverse"></a>
+ステップ5：グラデーションを逆にする（&ndash;reverse）
+</h2><p>ふつうは「新しい＝濃い／古い＝薄い」ですが、<code>--reverse</code> を付けると逆になります。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls --reverse   <span class="c1"># 古いものを濃く、新しいものを薄く</span>
+</span></span></code></pre></div><p>「昔からあるファイルを目立たせたい」ときに便利です。</p>
+<h2 id="ステップ6困ったらヘルプ-h--help">
+<a class="header-anchor" href="#%e3%82%b9%e3%83%86%e3%83%83%e3%83%976%e5%9b%b0%e3%81%a3%e3%81%9f%e3%82%89%e3%83%98%e3%83%ab%e3%83%97-h--help"></a>
+ステップ6：困ったらヘルプ（-h / &ndash;help）
+</h2><p>オプションを忘れたときは、ヘルプを表示しましょう。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls --help
+</span></span></code></pre></div><p>使えるオプションの一覧と説明が出ます。</p>
+<h2 id="オプション早見表">
+<a class="header-anchor" href="#%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3%e6%97%a9%e8%a6%8b%e8%a1%a8"></a>
+オプション早見表
+</h2><table>
+	<thead>
+			<tr>
+					<th>オプション</th>
+					<th>短縮形</th>
+					<th>種類</th>
+					<th>はたらき</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>--all</code></td>
+					<td><code>-a</code></td>
+					<td>フラグ</td>
+					<td>隠しファイルも表示する</td>
+			</tr>
+			<tr>
+					<td><code>--path &lt;パス&gt;</code></td>
+					<td><code>-p</code></td>
+					<td>文字列</td>
+					<td>表示するフォルダを指定する</td>
+			</tr>
+			<tr>
+					<td><code>--depth &lt;数値&gt;</code></td>
+					<td><code>-d</code></td>
+					<td>数値</td>
+					<td>サブフォルダを何段階表示するか</td>
+			</tr>
+			<tr>
+					<td><code>--reverse</code></td>
+					<td>（なし）</td>
+					<td>フラグ</td>
+					<td>グラデーションの濃淡を逆にする</td>
+			</tr>
+			<tr>
+					<td><code>--help</code></td>
+					<td><code>-h</code></td>
+					<td>フラグ</td>
+					<td>使い方を表示する</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="組み合わせる">
+<a class="header-anchor" href="#%e7%b5%84%e3%81%bf%e5%90%88%e3%82%8f%e3%81%9b%e3%82%8b"></a>
+組み合わせる
+</h2><p>オプションは自由に組み合わせられます。たとえば次は
+「<code>src</code> フォルダを、隠しファイル込みで、2段階潜って表示」します。</p>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>使い方</category></item><item><title>インストール方法</title><link>https://example.org/post/02-installation/</link><pubDate>Fri, 12 Jun 2026 10:10:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/02-installation/</guid><description>
+<![CDATA[<h1>インストール方法</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <p>expls は Rust で書かれています。導入方法はかんたんです。</p>
+<h2 id="1-rust-を用意する">
+<a class="header-anchor" href="#1-rust-%e3%82%92%e7%94%a8%e6%84%8f%e3%81%99%e3%82%8b"></a>
+1. Rust を用意する
+</h2><p>まだ Rust を入れていない場合は、<a href="https://rustup.rs/">rustup</a> を使うのが
+いちばん簡単です。次のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --proto <span class="s1">&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class="p">|</span> sh
+</span></span></code></pre></div><p>インストール後、ターミナルを開き直して、入っているか確認します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo --version
+</span></span><span class="line"><span class="cl"><span class="c1"># =&gt; cargo 1.xx.x のように表示されればOK</span>
+</span></span></code></pre></div><h2 id="2-ソースコードを取得してビルドする">
+<a class="header-anchor" href="#2-%e3%82%bd%e3%83%bc%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e5%8f%96%e5%be%97%e3%81%97%e3%81%a6%e3%83%93%e3%83%ab%e3%83%89%e3%81%99%e3%82%8b"></a>
+2. ソースコードを取得してビルドする
+</h2><p>リポジトリを取得し、リリースビルドを作成します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/kaikai-kitan/expls.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> expls
+</span></span><span class="line"><span class="cl">cargo build --release
+</span></span></code></pre></div><p>ビルドが終わると、実行ファイルが <code>target/release/expls</code> に作られます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./target/release/expls
+</span></span></code></pre></div><h2 id="3-どこからでも使えるようにする任意">
+<a class="header-anchor" href="#3-%e3%81%a9%e3%81%93%e3%81%8b%e3%82%89%e3%81%a7%e3%82%82%e4%bd%bf%e3%81%88%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e3%81%99%e3%82%8b%e4%bb%bb%e6%84%8f"></a>
+3. どこからでも使えるようにする（任意）
+</h2><p>毎回パスを打つのが面倒なら、<code>cargo install</code> でユーザー環境にインストールできます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo install --path .
+</span></span></code></pre></div><p>これで、どのフォルダにいても <code>expls</code> だけで実行できるようになります。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls
+</span></span></code></pre></div><h2 id="うまくいかないときは">
+<a class="header-anchor" href="#%e3%81%86%e3%81%be%e3%81%8f%e3%81%84%e3%81%8b%e3%81%aa%e3%81%84%e3%81%a8%e3%81%8d%e3%81%af"></a>
+うまくいかないときは
+</h2><ul>
+<li><code>cargo: command not found</code> と出る → Rust が入っていません。手順1からやり直してください。</li>
+<li>色が表示されない → お使いのターミナルが 24bit カラー（True Color）に対応しているか確認してください。最近のターミナル（iTerm2、Windows Terminal、VS Code のターミナルなど）はほぼ対応しています。</li>
+</ul>
+<h2 id="次に読む">
+<a class="header-anchor" href="#%e6%ac%a1%e3%81%ab%e8%aa%ad%e3%82%80"></a>
+次に読む
+</h2><ul>
+<li><a href="https://example.org/post/03-tutorial/">チュートリアル</a> で基本的な使い方を学びましょう。</li>
+</ul>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item><item><title>expls とは？ — 色で時間が見えるファイル一覧</title><link>https://example.org/post/01-introduction/</link><pubDate>Fri, 12 Jun 2026 10:00:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/01-introduction/</guid><description>
+<![CDATA[<h1>expls とは？ — 色で時間が見えるファイル一覧</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <h2 id="ひとことで言うと">
+<a class="header-anchor" href="#%e3%81%b2%e3%81%a8%e3%81%93%e3%81%a8%e3%81%a7%e8%a8%80%e3%81%86%e3%81%a8"></a>
+ひとことで言うと
+</h2><p><strong>expls</strong> は、ターミナルでおなじみの <code>ls</code> コマンドを、もっと見やすくしたツールです。
+名前は <strong>ex</strong>pand（拡張する）＋ <strong>ls</strong> から来ています。</p>
+<p>ふつうの <code>ls</code> はファイル名を並べるだけですが、expls は次の2つを <strong>色</strong> で表現します。</p>
+<ol>
+<li><strong>ファイルの種類</strong>（拡張子）ごとに色を変える</li>
+<li><strong>更新された新しさ</strong> を色の濃さで表す（新しいほど濃く、古いほど薄く）</li>
+</ol>
+<p>つまり、画面を見るだけで「どれが何のファイルか」「どれが最近触ったファイルか」が
+ひと目で分かります。</p>
+<h2 id="どんなときに便利">
+<a class="header-anchor" href="#%e3%81%a9%e3%82%93%e3%81%aa%e3%81%a8%e3%81%8d%e3%81%ab%e4%be%bf%e5%88%a9"></a>
+どんなときに便利？
+</h2><ul>
+<li>たくさんのファイルが入ったフォルダで、<strong>最近編集したファイルをすぐ見つけたい</strong>とき</li>
+<li>ソースコードや画像、設定ファイルなどが<strong>混在するフォルダを整理</strong>したいとき</li>
+<li><code>ls -la</code> の出力が文字ばかりで<strong>目が疲れる</strong>と感じるとき</li>
+</ul>
+<h2 id="イメージ">
+<a class="header-anchor" href="#%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8"></a>
+イメージ
+</h2><p>たとえば、Rust のプロジェクトでは次のように表示されます（実際にはカラーで出力されます）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Cargo.lock      ← 種類ごとに色が付く
+</span></span><span class="line"><span class="cl">Cargo.toml
+</span></span><span class="line"><span class="cl">LICENSE
+</span></span><span class="line"><span class="cl">README.md
+</span></span><span class="line"><span class="cl">src/            ← ディレクトリも色分け
+</span></span><span class="line"><span class="cl">target/
+</span></span></code></pre></div><p>同じ拡張子のファイルが複数あれば、<strong>更新が新しいものほど濃い色</strong>、
+<strong>古いものほど薄い色</strong>でグラデーション表示されます。</p>
+<h2 id="次に読む">
+<a class="header-anchor" href="#%e6%ac%a1%e3%81%ab%e8%aa%ad%e3%82%80"></a>
+次に読む
+</h2><ul>
+<li>まずは動かしてみたい → <a href="https://example.org/post/02-installation/">インストール</a></li>
+<li>使い方を順に学びたい → <a href="https://example.org/post/03-tutorial/">チュートリアル</a></li>
+<li>仕組みを知りたい → <a href="https://example.org/post/04-algorithm/">色分けのしくみ</a></li>
+<li>いろいろな使用例を見たい → <a href="https://example.org/post/05-examples/">実行例集</a></li>
+</ul>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item></channel></rss>

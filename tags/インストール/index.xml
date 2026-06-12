@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>インストール on expls</title><link>https://example.org/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:10:00 +0900</lastBuildDate><atom:link href="https://example.org/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>インストール方法</title><link>https://example.org/post/02-installation/</link><pubDate>Fri, 12 Jun 2026 10:10:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/02-installation/</guid><description>
+<![CDATA[<h1>インストール方法</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <p>expls は Rust で書かれています。導入方法はかんたんです。</p>
+<h2 id="1-rust-を用意する">
+<a class="header-anchor" href="#1-rust-%e3%82%92%e7%94%a8%e6%84%8f%e3%81%99%e3%82%8b"></a>
+1. Rust を用意する
+</h2><p>まだ Rust を入れていない場合は、<a href="https://rustup.rs/">rustup</a> を使うのが
+いちばん簡単です。次のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --proto <span class="s1">&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class="p">|</span> sh
+</span></span></code></pre></div><p>インストール後、ターミナルを開き直して、入っているか確認します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo --version
+</span></span><span class="line"><span class="cl"><span class="c1"># =&gt; cargo 1.xx.x のように表示されればOK</span>
+</span></span></code></pre></div><h2 id="2-ソースコードを取得してビルドする">
+<a class="header-anchor" href="#2-%e3%82%bd%e3%83%bc%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e5%8f%96%e5%be%97%e3%81%97%e3%81%a6%e3%83%93%e3%83%ab%e3%83%89%e3%81%99%e3%82%8b"></a>
+2. ソースコードを取得してビルドする
+</h2><p>リポジトリを取得し、リリースビルドを作成します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/kaikai-kitan/expls.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> expls
+</span></span><span class="line"><span class="cl">cargo build --release
+</span></span></code></pre></div><p>ビルドが終わると、実行ファイルが <code>target/release/expls</code> に作られます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./target/release/expls
+</span></span></code></pre></div><h2 id="3-どこからでも使えるようにする任意">
+<a class="header-anchor" href="#3-%e3%81%a9%e3%81%93%e3%81%8b%e3%82%89%e3%81%a7%e3%82%82%e4%bd%bf%e3%81%88%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e3%81%99%e3%82%8b%e4%bb%bb%e6%84%8f"></a>
+3. どこからでも使えるようにする（任意）
+</h2><p>毎回パスを打つのが面倒なら、<code>cargo install</code> でユーザー環境にインストールできます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo install --path .
+</span></span></code></pre></div><p>これで、どのフォルダにいても <code>expls</code> だけで実行できるようになります。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls
+</span></span></code></pre></div><h2 id="うまくいかないときは">
+<a class="header-anchor" href="#%e3%81%86%e3%81%be%e3%81%8f%e3%81%84%e3%81%8b%e3%81%aa%e3%81%84%e3%81%a8%e3%81%8d%e3%81%af"></a>
+うまくいかないときは
+</h2><ul>
+<li><code>cargo: command not found</code> と出る → Rust が入っていません。手順1からやり直してください。</li>
+<li>色が表示されない → お使いのターミナルが 24bit カラー（True Color）に対応しているか確認してください。最近のターミナル（iTerm2、Windows Terminal、VS Code のターミナルなど）はほぼ対応しています。</li>
+</ul>
+<h2 id="次に読む">
+<a class="header-anchor" href="#%e6%ac%a1%e3%81%ab%e8%aa%ad%e3%82%80"></a>
+次に読む
+</h2><ul>
+<li><a href="https://example.org/post/03-tutorial/">チュートリアル</a> で基本的な使い方を学びましょう。</li>
+</ul>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item></channel></rss>

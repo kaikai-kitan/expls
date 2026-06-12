@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>はじめに on expls</title><link>https://example.org/categories/%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:10:00 +0900</lastBuildDate><atom:link href="https://example.org/categories/%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>インストール方法</title><link>https://example.org/post/02-installation/</link><pubDate>Fri, 12 Jun 2026 10:10:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/02-installation/</guid><description>
+<![CDATA[<h1>インストール方法</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <p>expls は Rust で書かれています。導入方法はかんたんです。</p>
+<h2 id="1-rust-を用意する">
+<a class="header-anchor" href="#1-rust-%e3%82%92%e7%94%a8%e6%84%8f%e3%81%99%e3%82%8b"></a>
+1. Rust を用意する
+</h2><p>まだ Rust を入れていない場合は、<a href="https://rustup.rs/">rustup</a> を使うのが
+いちばん簡単です。次のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --proto <span class="s1">&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class="p">|</span> sh
+</span></span></code></pre></div><p>インストール後、ターミナルを開き直して、入っているか確認します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo --version
+</span></span><span class="line"><span class="cl"><span class="c1"># =&gt; cargo 1.xx.x のように表示されればOK</span>
+</span></span></code></pre></div><h2 id="2-ソースコードを取得してビルドする">
+<a class="header-anchor" href="#2-%e3%82%bd%e3%83%bc%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e5%8f%96%e5%be%97%e3%81%97%e3%81%a6%e3%83%93%e3%83%ab%e3%83%89%e3%81%99%e3%82%8b"></a>
+2. ソースコードを取得してビルドする
+</h2><p>リポジトリを取得し、リリースビルドを作成します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/kaikai-kitan/expls.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> expls
+</span></span><span class="line"><span class="cl">cargo build --release
+</span></span></code></pre></div><p>ビルドが終わると、実行ファイルが <code>target/release/expls</code> に作られます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./target/release/expls
+</span></span></code></pre></div><h2 id="3-どこからでも使えるようにする任意">
+<a class="header-anchor" href="#3-%e3%81%a9%e3%81%93%e3%81%8b%e3%82%89%e3%81%a7%e3%82%82%e4%bd%bf%e3%81%88%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e3%81%99%e3%82%8b%e4%bb%bb%e6%84%8f"></a>
+3. どこからでも使えるようにする（任意）
+</h2><p>毎回パスを打つのが面倒なら、<code>cargo install</code> でユーザー環境にインストールできます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo install --path .
+</span></span></code></pre></div><p>これで、どのフォルダにいても <code>expls</code> だけで実行できるようになります。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">expls
+</span></span></code></pre></div><h2 id="うまくいかないときは">
+<a class="header-anchor" href="#%e3%81%86%e3%81%be%e3%81%8f%e3%81%84%e3%81%8b%e3%81%aa%e3%81%84%e3%81%a8%e3%81%8d%e3%81%af"></a>
+うまくいかないときは
+</h2><ul>
+<li><code>cargo: command not found</code> と出る → Rust が入っていません。手順1からやり直してください。</li>
+<li>色が表示されない → お使いのターミナルが 24bit カラー（True Color）に対応しているか確認してください。最近のターミナル（iTerm2、Windows Terminal、VS Code のターミナルなど）はほぼ対応しています。</li>
+</ul>
+<h2 id="次に読む">
+<a class="header-anchor" href="#%e6%ac%a1%e3%81%ab%e8%aa%ad%e3%82%80"></a>
+次に読む
+</h2><ul>
+<li><a href="https://example.org/post/03-tutorial/">チュートリアル</a> で基本的な使い方を学びましょう。</li>
+</ul>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item><item><title>expls とは？ — 色で時間が見えるファイル一覧</title><link>https://example.org/post/01-introduction/</link><pubDate>Fri, 12 Jun 2026 10:00:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/01-introduction/</guid><description>
+<![CDATA[<h1>expls とは？ — 色で時間が見えるファイル一覧</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <h2 id="ひとことで言うと">
+<a class="header-anchor" href="#%e3%81%b2%e3%81%a8%e3%81%93%e3%81%a8%e3%81%a7%e8%a8%80%e3%81%86%e3%81%a8"></a>
+ひとことで言うと
+</h2><p><strong>expls</strong> は、ターミナルでおなじみの <code>ls</code> コマンドを、もっと見やすくしたツールです。
+名前は <strong>ex</strong>pand（拡張する）＋ <strong>ls</strong> から来ています。</p>
+<p>ふつうの <code>ls</code> はファイル名を並べるだけですが、expls は次の2つを <strong>色</strong> で表現します。</p>
+<ol>
+<li><strong>ファイルの種類</strong>（拡張子）ごとに色を変える</li>
+<li><strong>更新された新しさ</strong> を色の濃さで表す（新しいほど濃く、古いほど薄く）</li>
+</ol>
+<p>つまり、画面を見るだけで「どれが何のファイルか」「どれが最近触ったファイルか」が
+ひと目で分かります。</p>
+<h2 id="どんなときに便利">
+<a class="header-anchor" href="#%e3%81%a9%e3%82%93%e3%81%aa%e3%81%a8%e3%81%8d%e3%81%ab%e4%be%bf%e5%88%a9"></a>
+どんなときに便利？
+</h2><ul>
+<li>たくさんのファイルが入ったフォルダで、<strong>最近編集したファイルをすぐ見つけたい</strong>とき</li>
+<li>ソースコードや画像、設定ファイルなどが<strong>混在するフォルダを整理</strong>したいとき</li>
+<li><code>ls -la</code> の出力が文字ばかりで<strong>目が疲れる</strong>と感じるとき</li>
+</ul>
+<h2 id="イメージ">
+<a class="header-anchor" href="#%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8"></a>
+イメージ
+</h2><p>たとえば、Rust のプロジェクトでは次のように表示されます（実際にはカラーで出力されます）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Cargo.lock      ← 種類ごとに色が付く
+</span></span><span class="line"><span class="cl">Cargo.toml
+</span></span><span class="line"><span class="cl">LICENSE
+</span></span><span class="line"><span class="cl">README.md
+</span></span><span class="line"><span class="cl">src/            ← ディレクトリも色分け
+</span></span><span class="line"><span class="cl">target/
+</span></span></code></pre></div><p>同じ拡張子のファイルが複数あれば、<strong>更新が新しいものほど濃い色</strong>、
+<strong>古いものほど薄い色</strong>でグラデーション表示されます。</p>
+<h2 id="次に読む">
+<a class="header-anchor" href="#%e6%ac%a1%e3%81%ab%e8%aa%ad%e3%82%80"></a>
+次に読む
+</h2><ul>
+<li>まずは動かしてみたい → <a href="https://example.org/post/02-installation/">インストール</a></li>
+<li>使い方を順に学びたい → <a href="https://example.org/post/03-tutorial/">チュートリアル</a></li>
+<li>仕組みを知りたい → <a href="https://example.org/post/04-algorithm/">色分けのしくみ</a></li>
+<li>いろいろな使用例を見たい → <a href="https://example.org/post/05-examples/">実行例集</a></li>
+</ul>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item></channel></rss>

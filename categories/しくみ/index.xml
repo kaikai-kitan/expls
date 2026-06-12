@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>しくみ on expls</title><link>https://example.org/categories/%E3%81%97%E3%81%8F%E3%81%BF/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:30:00 +0900</lastBuildDate><atom:link href="https://example.org/categories/%E3%81%97%E3%81%8F%E3%81%BF/index.xml" rel="self" type="application/rss+xml"/><item><title>色分けのしくみ — アルゴリズム解説</title><link>https://example.org/post/04-algorithm/</link><pubDate>Fri, 12 Jun 2026 10:30:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/04-algorithm/</guid><description>
+<![CDATA[<h1>色分けのしくみ — アルゴリズム解説</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <p>expls の「色」はどうやって決まっているのでしょうか。
+ここでは仕組みを、できるだけやさしく説明します。</p>
+<p>色は次の <strong>2つの軸</strong> で決まります。</p>
+<ol>
+<li><strong>拡張子</strong> → 色あい（色相）を決める</li>
+<li><strong>更新の新しさ</strong> → 色の濃さ（鮮やかさ・明るさ）を決める</li>
+</ol>
+<p>順番に見ていきましょう。</p>
+<h2 id="軸1拡張子で色あいを決める">
+<a class="header-anchor" href="#%e8%bb%b81%e6%8b%a1%e5%bc%b5%e5%ad%90%e3%81%a7%e8%89%b2%e3%81%82%e3%81%84%e3%82%92%e6%b1%ba%e3%82%81%e3%82%8b"></a>
+軸1：拡張子で「色あい」を決める
+</h2><p>ファイルの拡張子（<code>.rs</code>, <code>.py</code>, <code>.png</code> など）ごとに、
+<strong>色相（hue）</strong> という「色あいを表す角度」を割り当てています。</p>
+<p>色相は 0〜360 の数字で、円のように一周します。</p>
+<ul>
+<li>0 / 360 付近 … 赤</li>
+<li>120 付近 … 緑</li>
+<li>240 付近 … 青</li>
+</ul>
+<p>たとえば expls では、おおよそ次のように割り当てています。</p>
+<table>
+	<thead>
+			<tr>
+					<th>拡張子</th>
+					<th>色あい（色相）</th>
+					<th>だいたいの色</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>.rs</code>（Rust）</td>
+					<td>25</td>
+					<td>オレンジ</td>
+			</tr>
+			<tr>
+					<td><code>.py</code>（Python）</td>
+					<td>215</td>
+					<td>青</td>
+			</tr>
+			<tr>
+					<td><code>.js</code></td>
+					<td>50</td>
+					<td>黄</td>
+			</tr>
+			<tr>
+					<td><code>.md</code></td>
+					<td>175</td>
+					<td>シアン</td>
+			</tr>
+			<tr>
+					<td><code>.png</code> などの画像</td>
+					<td>325</td>
+					<td>ピンク</td>
+			</tr>
+			<tr>
+					<td>ディレクトリ</td>
+					<td>220</td>
+					<td>青</td>
+			</tr>
+	</tbody>
+</table>
+<p>同じ言語・同じ仲間のファイルは似た色になるので、
+画面の中で<strong>種類ごとにまとまって見える</strong>わけです。</p>
+<p>リストに無い拡張子（未知のファイル）には色あいを割り当てず、<strong>グレー</strong>で表示します。</p>
+<h2 id="軸2更新の新しさで濃さを決める">
+<a class="header-anchor" href="#%e8%bb%b82%e6%9b%b4%e6%96%b0%e3%81%ae%e6%96%b0%e3%81%97%e3%81%95%e3%81%a7%e6%bf%83%e3%81%95%e3%82%92%e6%b1%ba%e3%82%81%e3%82%8b"></a>
+軸2：更新の新しさで「濃さ」を決める
+</h2><p>次に、同じ拡張子のファイルを集めて、<strong>更新日時の新しい順に並べます</strong>。
+そして並び順から、<code>0.0</code>〜<code>1.0</code> の数字 <code>t</code> を計算します。</p>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>しくみ</category></item></channel></rss>

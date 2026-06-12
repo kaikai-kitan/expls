@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>概要 on expls</title><link>https://example.org/tags/%E6%A6%82%E8%A6%81/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:00:00 +0900</lastBuildDate><atom:link href="https://example.org/tags/%E6%A6%82%E8%A6%81/index.xml" rel="self" type="application/rss+xml"/><item><title>expls とは？ — 色で時間が見えるファイル一覧</title><link>https://example.org/post/01-introduction/</link><pubDate>Fri, 12 Jun 2026 10:00:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/01-introduction/</guid><description>
+<![CDATA[<h1>expls とは？ — 色で時間が見えるファイル一覧</h1><p>著者: kaido iwata(xxx@example.com)</p>
+        
+          <h2 id="ひとことで言うと">
+<a class="header-anchor" href="#%e3%81%b2%e3%81%a8%e3%81%93%e3%81%a8%e3%81%a7%e8%a8%80%e3%81%86%e3%81%a8"></a>
+ひとことで言うと
+</h2><p><strong>expls</strong> は、ターミナルでおなじみの <code>ls</code> コマンドを、もっと見やすくしたツールです。
+名前は <strong>ex</strong>pand（拡張する）＋ <strong>ls</strong> から来ています。</p>
+<p>ふつうの <code>ls</code> はファイル名を並べるだけですが、expls は次の2つを <strong>色</strong> で表現します。</p>
+<ol>
+<li><strong>ファイルの種類</strong>（拡張子）ごとに色を変える</li>
+<li><strong>更新された新しさ</strong> を色の濃さで表す（新しいほど濃く、古いほど薄く）</li>
+</ol>
+<p>つまり、画面を見るだけで「どれが何のファイルか」「どれが最近触ったファイルか」が
+ひと目で分かります。</p>
+<h2 id="どんなときに便利">
+<a class="header-anchor" href="#%e3%81%a9%e3%82%93%e3%81%aa%e3%81%a8%e3%81%8d%e3%81%ab%e4%be%bf%e5%88%a9"></a>
+どんなときに便利？
+</h2><ul>
+<li>たくさんのファイルが入ったフォルダで、<strong>最近編集したファイルをすぐ見つけたい</strong>とき</li>
+<li>ソースコードや画像、設定ファイルなどが<strong>混在するフォルダを整理</strong>したいとき</li>
+<li><code>ls -la</code> の出力が文字ばかりで<strong>目が疲れる</strong>と感じるとき</li>
+</ul>
+<h2 id="イメージ">
+<a class="header-anchor" href="#%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8"></a>
+イメージ
+</h2><p>たとえば、Rust のプロジェクトでは次のように表示されます（実際にはカラーで出力されます）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Cargo.lock      ← 種類ごとに色が付く
+</span></span><span class="line"><span class="cl">Cargo.toml
+</span></span><span class="line"><span class="cl">LICENSE
+</span></span><span class="line"><span class="cl">README.md
+</span></span><span class="line"><span class="cl">src/            ← ディレクトリも色分け
+</span></span><span class="line"><span class="cl">target/
+</span></span></code></pre></div><p>同じ拡張子のファイルが複数あれば、<strong>更新が新しいものほど濃い色</strong>、
+<strong>古いものほど薄い色</strong>でグラデーション表示されます。</p>
+<h2 id="次に読む">
+<a class="header-anchor" href="#%e6%ac%a1%e3%81%ab%e8%aa%ad%e3%82%80"></a>
+次に読む
+</h2><ul>
+<li>まずは動かしてみたい → <a href="https://example.org/post/02-installation/">インストール</a></li>
+<li>使い方を順に学びたい → <a href="https://example.org/post/03-tutorial/">チュートリアル</a></li>
+<li>仕組みを知りたい → <a href="https://example.org/post/04-algorithm/">色分けのしくみ</a></li>
+<li>いろいろな使用例を見たい → <a href="https://example.org/post/05-examples/">実行例集</a></li>
+</ul>
+        
+        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item></channel></rss>
