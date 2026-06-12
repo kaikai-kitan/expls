@@ -1,0 +1,18 @@
+baseURL = 'https://kaikai-kitan.github.io/expls/'
+locale = 'ja'
+defaultContentLanguage = 'ja'
+title = 'expls'
+theme = 'hugo-theme-reimu'
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[outputs]
+  home = ['html', 'rss']
