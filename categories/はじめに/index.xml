@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>はじめに on expls</title><link>https://example.org/categories/%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:10:00 +0900</lastBuildDate><atom:link href="https://example.org/categories/%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>インストール方法</title><link>https://example.org/post/02-installation/</link><pubDate>Fri, 12 Jun 2026 10:10:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/02-installation/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>はじめに on expls</title><link>https://kaikai-kitan.github.io/expls/categories/%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:10:00 +0900</lastBuildDate><atom:link href="https://kaikai-kitan.github.io/expls/categories/%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>インストール方法</title><link>https://kaikai-kitan.github.io/expls/post/02-installation/</link><pubDate>Fri, 12 Jun 2026 10:10:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://kaikai-kitan.github.io/expls/post/02-installation/</guid><description>
 <![CDATA[<h1>インストール方法</h1><p>著者: kaido iwata(xxx@example.com)</p>
         
           <p>expls は Rust で書かれています。導入方法はかんたんです。</p>
@@ -38,10 +38,10 @@
 <a class="header-anchor" href="#%e6%ac%a1%e3%81%ab%e8%aa%ad%e3%82%80"></a>
 次に読む
 </h2><ul>
-<li><a href="https://example.org/post/03-tutorial/">チュートリアル</a> で基本的な使い方を学びましょう。</li>
+<li><a href="https://kaikai-kitan.github.io/expls/post/03-tutorial/">チュートリアル</a> で基本的な使い方を学びましょう。</li>
 </ul>
         
-        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item><item><title>expls とは？ — 色で時間が見えるファイル一覧</title><link>https://example.org/post/01-introduction/</link><pubDate>Fri, 12 Jun 2026 10:00:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/01-introduction/</guid><description>
+        <hr><p>この記事は2026-06-12に<a href='https://kaikai-kitan.github.io/expls/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item><item><title>expls とは？ — 色で時間が見えるファイル一覧</title><link>https://kaikai-kitan.github.io/expls/post/01-introduction/</link><pubDate>Fri, 12 Jun 2026 10:00:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://kaikai-kitan.github.io/expls/post/01-introduction/</guid><description>
 <![CDATA[<h1>expls とは？ — 色で時間が見えるファイル一覧</h1><p>著者: kaido iwata(xxx@example.com)</p>
         
           <h2 id="ひとことで言うと">
@@ -80,10 +80,10 @@
 <a class="header-anchor" href="#%e6%ac%a1%e3%81%ab%e8%aa%ad%e3%82%80"></a>
 次に読む
 </h2><ul>
-<li>まずは動かしてみたい → <a href="https://example.org/post/02-installation/">インストール</a></li>
-<li>使い方を順に学びたい → <a href="https://example.org/post/03-tutorial/">チュートリアル</a></li>
-<li>仕組みを知りたい → <a href="https://example.org/post/04-algorithm/">色分けのしくみ</a></li>
-<li>いろいろな使用例を見たい → <a href="https://example.org/post/05-examples/">実行例集</a></li>
+<li>まずは動かしてみたい → <a href="https://kaikai-kitan.github.io/expls/post/02-installation/">インストール</a></li>
+<li>使い方を順に学びたい → <a href="https://kaikai-kitan.github.io/expls/post/03-tutorial/">チュートリアル</a></li>
+<li>仕組みを知りたい → <a href="https://kaikai-kitan.github.io/expls/post/04-algorithm/">色分けのしくみ</a></li>
+<li>いろいろな使用例を見たい → <a href="https://kaikai-kitan.github.io/expls/post/05-examples/">実行例集</a></li>
 </ul>
         
-        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item></channel></rss>
+        <hr><p>この記事は2026-06-12に<a href='https://kaikai-kitan.github.io/expls/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>はじめに</category></item></channel></rss>

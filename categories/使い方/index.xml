@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>使い方 on expls</title><link>https://example.org/categories/%E4%BD%BF%E3%81%84%E6%96%B9/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:40:00 +0900</lastBuildDate><atom:link href="https://example.org/categories/%E4%BD%BF%E3%81%84%E6%96%B9/index.xml" rel="self" type="application/rss+xml"/><item><title>実行例集</title><link>https://example.org/post/05-examples/</link><pubDate>Fri, 12 Jun 2026 10:40:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/05-examples/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>使い方 on expls</title><link>https://kaikai-kitan.github.io/expls/categories/%E4%BD%BF%E3%81%84%E6%96%B9/</link><description>Recent content from expls</description><generator>Hugo</generator><language>ja</language><managingEditor>xxx@example.com (kaido iwata)</managingEditor><webMaster>xxx@example.com (kaido iwata)</webMaster><copyright>本ブログのすべての文書は、特に指定されていない限り、BY-NC-SAライセンスに従っています。引用の際は出典を明記してください！</copyright><lastBuildDate>Fri, 12 Jun 2026 10:40:00 +0900</lastBuildDate><atom:link href="https://kaikai-kitan.github.io/expls/categories/%E4%BD%BF%E3%81%84%E6%96%B9/index.xml" rel="self" type="application/rss+xml"/><item><title>実行例集</title><link>https://kaikai-kitan.github.io/expls/post/05-examples/</link><pubDate>Fri, 12 Jun 2026 10:40:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://kaikai-kitan.github.io/expls/post/05-examples/</guid><description>
 <![CDATA[<h1>実行例集</h1><p>著者: kaido iwata(xxx@example.com)</p>
         
           <p>ここでは、よく使う場面ごとに expls の実行例をまとめます。
@@ -56,7 +56,7 @@
 </span></span></code></pre></div><p>新しいものを薄く、古いものを濃く表示します。
 「昔から残っているファイルを目立たせたい」ときに使います。</p>
         
-        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>使い方</category></item><item><title>チュートリアル — 基本からオプションまで</title><link>https://example.org/post/03-tutorial/</link><pubDate>Fri, 12 Jun 2026 10:20:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://example.org/post/03-tutorial/</guid><description>
+        <hr><p>この記事は2026-06-12に<a href='https://kaikai-kitan.github.io/expls/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>使い方</category></item><item><title>チュートリアル — 基本からオプションまで</title><link>https://kaikai-kitan.github.io/expls/post/03-tutorial/</link><pubDate>Fri, 12 Jun 2026 10:20:00 +0900</pubDate><author>xxx@example.com (kaido iwata)</author><guid>https://kaikai-kitan.github.io/expls/post/03-tutorial/</guid><description>
 <![CDATA[<h1>チュートリアル — 基本からオプションまで</h1><p>著者: kaido iwata(xxx@example.com)</p>
         
           <p>このページでは、expls を実際に動かしながら使い方を覚えていきます。
@@ -152,4 +152,4 @@
 </h2><p>オプションは自由に組み合わせられます。たとえば次は
 「<code>src</code> フォルダを、隠しファイル込みで、2段階潜って表示」します。</p>
         
-        <hr><p>この記事は2026-06-12に<a href='https://example.org/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>使い方</category></item></channel></rss>
+        <hr><p>この記事は2026-06-12に<a href='https://kaikai-kitan.github.io/expls/'>expls</a>で公開され、最終更新日は2026-06-12です</p>]]></description><category>使い方</category></item></channel></rss>
