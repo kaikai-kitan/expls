@@ -4,6 +4,8 @@ use std::fs;
 use std::path::Path;
 use std::time::UNIX_EPOCH;
 
+mod gencomp;
+
 #[derive(Parser)]
 #[command(name = "expls")]
 #[command(about = "ls with extension-based colors and modification-time gradients")]
@@ -24,6 +26,10 @@ struct Cli {
     /// Reverse gradient: old = dark, new = light
     #[arg(long = "reverse")]
     reverse: bool,
+
+    /// Generate shell completion files into ./completions and exit (hidden)
+    #[arg(long, hide = true, default_value_t = false)]
+    pub completions: bool,
 }
 
 /// ディレクトリエントリ1件分の情報。
@@ -543,6 +549,12 @@ mod tests {
 
 fn main() {
     let cli = Cli::parse();
+
+    // 隠しオプション --completions が指定されたら補完ファイルを生成して終了する。
+    if cli.completions {
+        gencomp::generate(Path::new("completions"));
+        return;
+    }
 
     let target = Path::new(&cli.path);
     if !target.exists() {

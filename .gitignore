@@ -6,6 +6,9 @@
 debug
 target
 
+# Generated shell completion files (produced by `expls --completions`)
+completions/
+
 # Hugo generated output and cache (docs site)
 # docs/public is a worktree of the gh-pages branch — never commit it to main
 docs/public/
