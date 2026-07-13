@@ -215,12 +215,8 @@ fn collect_entries(
             indent: current_depth,
         });
 
-        if is_dir {
-            if let Some(max) = max_depth {
-                if current_depth < max {
-                    collect_entries(&path, show_hidden, max_depth, current_depth + 1, entries);
-                }
-            }
+        if is_dir && let Some(max) = max_depth && current_depth < max {
+            collect_entries(&path, show_hidden, max_depth, current_depth + 1, entries);
         }
     }
 }
