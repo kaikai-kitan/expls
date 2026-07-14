@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/assets/expls-icon.png" alt="expls icon" width="140">
+  <img src=".github/assets/expls-icon-colorful.png" alt="expls icon" width="140">
 </p>
 
 # expls (エクスプレス)
