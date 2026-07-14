@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/expls-icon.png" alt="expls icon" width="140">
+</p>
+
 # expls (エクスプレス)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange)](https://github.com/kaikai-kitan/expls/blob/main/LICENSE)
