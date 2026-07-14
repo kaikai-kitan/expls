@@ -89,6 +89,29 @@ $ expls --completions
 
 ## Installation
 
+### Homebrew（推奨）
+
+[Homebrew](https://brew.sh/) を使ってインストールできます。
+
+```bash
+$ brew install kaikai-kitan/tap/expls
+```
+
+初回は tap の登録も兼ねてこの1行で完了します。以降のアップデートは次のコマンドで行えます。
+
+```bash
+$ brew upgrade expls
+```
+
+アンインストールする場合:
+
+```bash
+$ brew uninstall expls
+$ brew untap kaikai-kitan/tap   # tap の登録も消す場合
+```
+
+### cargo（ソースからビルド）
+
 Rust のツールチェイン（`cargo`）が必要です。
 
 ```bash
